@@ -1,0 +1,74 @@
+[
+  {
+    "model": "shopping_api.ItemModel",
+    "fields": {
+      "id": 1,
+      "name": "Banana",
+      "price": 0.99,
+      "category": "fruits"
+    }
+  },
+  {
+    "model": "shopping_api.ItemModel",
+    "fields": {
+      "id": 2,
+      "name": "Apple",
+      "price": 1.99,
+      "category": "fruits"
+    }
+  },
+  {
+    "model": "shopping_api.ItemModel",
+    "fields": {
+      "id": 3,
+      "name": "Onion",
+      "price": 1.19,
+      "category": "vegetables"
+    }
+  },
+  {
+    "model": "shopping_api.ItemModel",
+    "fields": {
+      "id": 4,
+      "name": "Potato",
+      "price": 1.19,
+      "category": "vegetables"
+    }
+  },
+  {
+    "model": "shopping_api.ItemModel",
+    "fields": {
+      "id": 5,
+      "name": "Grapes",
+      "price": 1.49,
+      "category": "fruits"
+    }
+  },
+  {
+    "model": "shopping_api.ItemModel",
+    "fields": {
+      "id": 6,
+      "name": "Orange",
+      "price": 1.39,
+      "category": "fruits"
+    }
+  },
+  {
+    "model": "shopping_api.ItemModel",
+    "fields": {
+      "id": 7,
+      "name": "Bell Peppers",
+      "price": 1.19,
+      "category": "vegetables"
+    }
+  },
+  {
+    "model": "shopping_api.ItemModel",
+    "fields": {
+      "id": 8,
+      "name": "Carrots",
+      "price": 0.99,
+      "category": "vegetables"
+    }
+  }
+]

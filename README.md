@@ -34,3 +34,43 @@ npm install
 ```
 npm start
 ```
+
+### Django backend
+
+Create a Python virtual environment, activate it and install Django.
+(https://docs.djangoproject.com/en/3.2/intro/install/)
+
+In the Django project directory:
+
+1. To migrate:
+
+```
+python manage.py makemigrations
+```
+
+```
+python manage.py migrate
+```
+
+2. To load the data:
+
+```
+python manage.py loaddata fixtures/items.json
+```
+
+Example of an item in items.json:
+
+```
+{
+"id": 1,
+"name": "Banana",
+"price": "0.99",
+"category": "fruits"
+}
+```
+
+3. To run the server:
+
+```
+python manage.py runserver 0.0.0.0:8000
+```
