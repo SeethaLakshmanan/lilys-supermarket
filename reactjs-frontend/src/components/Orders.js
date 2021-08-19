@@ -1,10 +1,12 @@
 import React from "react";
+import { withRouter } from "react-router-dom";
 import Navbar, { RouteAuth } from "./Navbar";
 import OrderItem from "./OrderItem";
 import OrderDetails from "./OrderDetails";
+import CustomButton from "./CustomButton";
 
 // React class component to fetch and display a user's orders
-export default class Orders extends React.Component {
+class Orders extends React.Component {
     constructor() {
         super();
         this.state = {
@@ -52,6 +54,10 @@ export default class Orders extends React.Component {
             });
     };
 
+    startShopping = () => {
+        this.props.history.push("/");
+    };
+
     componentDidMount() {
         if (RouteAuth.isAuthenticated) this.loadOrders();
     }
@@ -79,8 +85,16 @@ export default class Orders extends React.Component {
                             />
                         ) : null}
                     </div>
-                ) : null}
+                ) : (
+                    <div style={{ textAlign: "center" }}>
+                        <h3>You did not place any orders!</h3>
+                        <br />
+                        <CustomButton onClick={this.startShopping} label="Start Shopping" />
+                    </div>
+                )}
             </div>
         );
     }
 }
+
+export default withRouter(Orders);
