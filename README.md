@@ -35,6 +35,12 @@ npm install
 npm start
 ```
 
+3. To run the storybook:
+
+```
+npm run storybook
+```
+
 ### Django backend
 
 Create a Python virtual environment, activate it and install Django.
