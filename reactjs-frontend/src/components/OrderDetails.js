@@ -1,8 +1,7 @@
 import React from "react";
-import { Modal, Row, Col } from "react-bootstrap";
 import { connect } from "react-redux";
-import { getDate } from "../utils/index";
 import "../styles/styleSettings.css";
+import OrderDetailsModal from "./OrderDetailsModal";
 
 // React class component to display the details of an order in a modal
 class OrderDetails extends React.Component {
@@ -40,7 +39,14 @@ class OrderDetails extends React.Component {
 
     render() {
         return (
-            <Modal show={this.props.show} onHide={this.props.handleClose}>
+            <OrderDetailsModal
+                show={this.props.show}
+                handleClose={this.props.handleClose}
+                createdAt={this.props.selectedOrder.createdAt}
+                orderItems={this.state.orderItems}
+                total={this.props.selectedOrder.total}
+            />
+            /* <Modal show={this.props.show} onHide={this.props.handleClose}>
                 <Modal.Header closeButton>
                     <Modal.Title>
                         Ordered on: {getDate(this.props.selectedOrder.createdAt)}
@@ -68,6 +74,7 @@ class OrderDetails extends React.Component {
                     </Row>
                 </Modal.Body>
             </Modal>
+         */
         );
     }
 }

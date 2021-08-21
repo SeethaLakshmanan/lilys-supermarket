@@ -67,8 +67,11 @@ class Orders extends React.Component {
         return (
             <div>
                 <Navbar />
-                {!RouteAuth.isAuthenticated ? <div>Login to see your orders!!</div> : null}
-                {orders.length > 0 ? (
+                {!RouteAuth.isAuthenticated ? (
+                    <div style={{ textAlign: "center" }}>
+                        <h3>Login to see your orders!!</h3>
+                    </div>
+                ) : orders.length > 0 ? (
                     <div className="cart-items common">
                         {orders.reverse().map((order, index) => (
                             <OrderItem
